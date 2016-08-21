@@ -87,7 +87,7 @@
 
             <div ng-hide="commentForm.$invalid">
                 <blockquote>
-                    <div>{{newComment.rating}} Stars</div>
+                    <div>{{newComment.rating.value}} Stars</div>
                     <div>{{newComment.comment}}</div>
                     <footer>
                         {{newComment.name}}
@@ -126,7 +126,7 @@
                         <ul class="list-inline">
                             <li ng-repeat="rad in radios">
                                 <input type="radio"
-                                       ng-model="$parent.selectedRadio"
+                                       ng-model="newComment.rating"
                                        ng-value="rad"/>
                                     <span class="control-label">{{rad.value}}
                                     </span>

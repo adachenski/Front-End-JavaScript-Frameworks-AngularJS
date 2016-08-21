@@ -161,12 +161,12 @@ angular.module('confusionApp', [])
             {value:2},
             {value:3},
             {value:4},
-            {value:5},
+            {value:5}
         ];
         $scope.selectedRadio= $scope.radios[4];
         $scope.newComment = {
             name:'',
-            rating:$scope.selectedRadio.value,
+            rating:$scope.selectedRadio,
             comment:''
         }
         $scope.submitComment = function () {
@@ -175,7 +175,17 @@ angular.module('confusionApp', [])
             //"The date property of your JavaScript object holding the comment" = new Date().toISOString();
 
             // Step 3: Push your comment into the dish's comment array
-            $scope.dish.comments.push("Your JavaScript Object holding the comment");
+            $scope.dish.comments.push({
+                author:$scope.newComment.name,
+                rating:$scope.newComment.rating.value,
+                comment:$scope.newComment.comment,
+                date:new Date().toDateString()
+            });
+            $scope.newComment.name='';
+            $scope.newComment.rating=$scope.radios[4];
+            $scope.newComment.comment='';
+            $scope.commentForm.$setPristine();
+
 
             //Step 4: reset your form to pristine
 
