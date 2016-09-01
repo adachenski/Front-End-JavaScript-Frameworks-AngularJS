@@ -1,0 +1,90 @@
+<!-- saved from url=(0316)https://d18ky98rnyall9.cloudfront.net/_27df4bcf1283b490a6bbb31cc743911e_home.html?Expires=1472342400&Signature=AB-CbpXhnfww8ETLjbr1VQrIlqHiW~hUCBecGw9BK95vFzwvUMBUZBkEkxG64I72ZJWQfRj3AGwwu0flTKpq5dbxNaNvV3V8zq-8mJogZoGxd00EE8F7sci1Z459LvIuIpSn4eU9KPPpBJXzhjJ9SHV7h83yoob7-trSki4xie8_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A -->
+<html class="gr__d18ky98rnyall9_cloudfront_net">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+</head>
+<body data-gr-c-s-loaded="true">
+<div class="container" ng-controller="IndexController">
+    <div class="row row-content">
+        <div class="col-xs-12 col-sm-3 col-sm-push-9">
+            <p style="padding:20px;"></p>
+
+            <h3 align="center">Our Lipsmacking Culinary Creations</h3>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-sm-pull-3">
+            <div class="media">
+                <div class="media-left media-middle">
+                    <a href="#">
+                        <img class="media-object img-thumbnail"
+                             ng-src="{{maindish.image}}" alt="{{maindish.image}}"/>
+                    </a>
+                </div>
+                <div class="media-body">
+
+                    <h2 class="media-heading">{{maindish.name}}
+                        <span class="label label-danger">{{maindish.label}}</span>
+                        <span class="badge">{{maindish.price | currency}}</span>
+                    </h2>
+
+                    <p>{{promotion.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row row-content">
+        <div class="col-xs-12 col-sm-3">
+            <p style="padding:20px;"></p>
+
+            <h3 align="center">This Month's Promotions</h3>
+        </div>
+        <div class="col-xs-12 col-sm-9">
+            <div class="media">
+                <div class="media-left media-middle">
+                    <a href="#">
+                        <img class="media-object img-thumbnail"
+                             ng-src="{{promotion.image}}" alt="{{promotion.image}}"/>
+                    </a>
+                </div>
+                <div class="media-body">
+
+                    <h2 class="media-heading">{{promotion.name}}
+                        <span class="label label-danger">{{promotion.label}}</span>
+                        <span class="badge">{{promotion.price | currency}}</span>
+                    </h2>
+
+                    <p>{{promotion.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row row-content">
+        <div class="col-xs-12 col-sm-3 col-sm-push-9">
+            <p style="padding:20px;"></p>
+
+            <h3 align="center">Meet our Culinary Specialists</h3>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-sm-pull-3">
+            <div class="media">
+                <div class="media-left media-middle">
+                    <a href="#">
+                        <img class="media-object img-thumbnail"
+                             ng-src="{{leader.image}}" alt="{{leader.image}}"/>
+                    </a>
+                </div>
+                <div class="media-body">
+
+                    <h2 class="media-heading">{{leader.name}}
+                        <span style="font-size: 0.6em;color: gray">{{leader.designation}}</span>
+                    </h2>
+
+                    <p>{{leader.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
